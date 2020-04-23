@@ -1,5 +1,8 @@
 package test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LengthOfLIS {
     public static int lengthOfLIS(int[] nums) {
         if (nums.length == 0){
@@ -21,9 +24,11 @@ public class LengthOfLIS {
         return maxLen;
     }
 
+
     public static void main(String[] args) {
-        int[] nums ={10,9,2,5,3,7,101,18};
-        int maxLen = lengthOfLIS(nums);
-        System.out.println(maxLen);
+//        int[] nums ={10,9,2,5,3,7,101,18};
+//        int maxLen = lengthOfLIS(nums);
+//        System.out.println(maxLen);
+
     }
 }

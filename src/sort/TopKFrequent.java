@@ -3,7 +3,7 @@ package sort;
 import java.util.*;
 
 public class TopKFrequent {
-    public static List<Integer> topKFrequent(int[] nums, int k) {
+    public static int[]topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> frequencyForNum = new HashMap<Integer, Integer>();
         for (int num : nums) {
             frequencyForNum.put(num, frequencyForNum.getOrDefault(num, 0) + 1);
@@ -27,7 +27,11 @@ public class TopKFrequent {
                 topK.addAll(buckets[i].subList(0, k - topK.size()));
             }
         }
-        return topK;
+        int[] top = new int[topK.size()];
+        for (int i = 0; i < topK.size(); i++) {
+            top[i] = topK.get(i);
+        }
+        return top;
     }
 
     public static void main(String[] args) {
